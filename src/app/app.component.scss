@@ -1,0 +1,20 @@
+$bottomSpacing: 40px;
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  &-content {
+    margin-bottom: $bottomSpacing;
+  }
+
+  &-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $bottomSpacing;
+    background-color: red;
+  }
+}
