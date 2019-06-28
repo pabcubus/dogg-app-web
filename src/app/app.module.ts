@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { MaterialModule } from './screens/material.module';
 import { app_routing } from './app-routing.module';
 
 import { ScreensModule } from './screens/screens.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    MaterialModule,
     FormsModule,
     BrowserModule,
     ScreensModule,
+    SharedModule,
     app_routing
   ],
   exports: [],

@@ -1,24 +1,19 @@
 <div class="home">
-  <div *ngFor="let dog of dogs" class="home-card">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{dog.title}}</mat-card-title>
-        <mat-card-subtitle>{{dog.subtitle}}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="{{dog.image}}" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          {{dog.description}}
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="home-card-controls">
-        <button mat-mini-fab>
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-mini-fab>
-          <mat-icon>more_horiz</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
+  <div class="row" *ngFor="let dog of dogs">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{dog.image}}" alt="Photo of a Shiba Inu">
+          <span class="card-title">{{dog.title}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{dog.description}}</p>
+        </div>
+        <div class="card-action card-controls">
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">more_horiz</i></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

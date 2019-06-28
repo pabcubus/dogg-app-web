@@ -5,16 +5,17 @@ $bottomSpacing: 40px;
 }
 
 .wrapper {
-  &-content {
-    margin-bottom: $bottomSpacing;
-  }
+  .nav-wrapper {
+    .logo {
+      display: inline-block;
+      height: 100%;
 
-  &-navigation {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: $bottomSpacing;
-    background-color: red;
+      & > img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 30px;
+      }
+    }
   }
 }

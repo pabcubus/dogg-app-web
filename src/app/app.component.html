@@ -1,7 +1,27 @@
 <div class="wrapper">
+  <div class="wrapper-navigation">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a class="logo">
+            <img src="assets/images/icon-little.png">
+          </a>
+          <a class="sidenav-trigger" data-target="slide-out" href="#"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+  </div>
   <div class="wrapper-content">
     <router-outlet></router-outlet>
   </div>
-  <div class="wrapper-navigation">
-  </div>
 </div>
+
+<ul id="slide-out" class="sidenav">
+  <li><a href="#!"><i class="material-icons">dashboard</i>Posts</a></li>
+  <li><a href="#!"><i class="material-icons">map</i>Perdidos</a></li>
+  <li><a href="#!"><i class="material-icons">face</i>Perfil</a></li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><a href="#!">Cerrar sesión</a></li>
+</ul>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as M from 'materialize-css';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dogg-app';
+
+  ngAfterViewInit(): void {
+    var elems = document.querySelectorAll('#slide-out');
+    var instance = M.Sidenav.init(elems, {});
+  }
 }

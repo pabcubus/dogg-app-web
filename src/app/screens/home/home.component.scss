@@ -1,10 +1,10 @@
 .home {
-  &-card {
+  .card {
     padding-bottom: 5px;
 
     &-controls {
-      button {
-        margin-right: 5px;
+      a {
+        margin-left: 5px;
       }
     }
   }
