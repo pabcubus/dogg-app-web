@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -8,6 +9,7 @@ import { app_routing } from './app-routing.module';
 
 import { ScreensModule } from './screens/screens.module';
 import { SharedModule } from './shared/shared.module';
+import { MaterializeComponentsModule } from './shared/materializecomponents.module';
 import { ServicesModule } from './services/services.module';
 
 @NgModule({
@@ -20,6 +22,8 @@ import { ServicesModule } from './services/services.module';
     ScreensModule,
     SharedModule,
     ServicesModule,
+    BrowserAnimationsModule,
+    MaterializeComponentsModule,
     app_routing
   ],
   exports: [],
