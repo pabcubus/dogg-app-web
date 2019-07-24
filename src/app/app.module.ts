@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -8,6 +8,7 @@ import { app_routing } from './app-routing.module';
 
 import { ScreensModule } from './screens/screens.module';
 import { SharedModule } from './shared/shared.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,12 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     ScreensModule,
     SharedModule,
+    ServicesModule,
     app_routing
   ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [
-      CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: []
 })
 export class AppModule { }

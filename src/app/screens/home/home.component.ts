@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import * as M from 'materialize-css';
+
 import { Dog } from '../../interfaces/dog';
 
 @Component({
@@ -21,6 +23,13 @@ export class HomeComponent implements OnInit {
   }]
 
   constructor() { }
+
+  ngAfterViewInit() {
+    /*
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {});
+    */
+  }
 
   ngOnInit() {
   }

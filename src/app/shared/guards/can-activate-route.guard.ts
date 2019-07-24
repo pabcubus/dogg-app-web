@@ -6,15 +6,19 @@ import {
   Router
 } from '@angular/router';
 
+import { AuthService } from '../../services/auth.service'
+
 @Injectable()
 export class CanActivateRouteGuard implements CanActivate {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private auth: AuthService
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    this.router.navigate(['/home']);
-    return false;
+    const user = this.auth.getUserByToken();
+
+    return user ? true : false;
   }
 }

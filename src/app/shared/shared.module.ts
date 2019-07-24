@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CanActivateRouteGuard } from './guards/can-activate-route.guard'
@@ -12,8 +12,6 @@ import { CanActivateRouteGuard } from './guards/can-activate-route.guard'
   ],
   declarations: [],
   providers: [CanActivateRouteGuard],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: []
 })
 export class SharedModule { }

@@ -1,0 +1,11 @@
+@import '../../../assets/scss/colors';
+
+.login {
+    background-color: $mainColor;
+    height: 100vh;
+
+    &-wrapper {
+        padding-top: 30%;
+        height: 100px;
+    }
+}

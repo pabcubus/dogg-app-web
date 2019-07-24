@@ -1,12 +1,14 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const modules: Array<any> = [
   HomeComponent,
-  ProfileComponent
+  ProfileComponent,
+  LoginComponent
 ];
 
 @NgModule({
@@ -14,8 +16,6 @@ const modules: Array<any> = [
     CommonModule,
   ],
   declarations: [...modules],
-  schemas: [
-      CUSTOM_ELEMENTS_SCHEMA
-  ]
+  schemas: []
 })
 export class ScreensModule { }
