@@ -19,6 +19,11 @@ export class CanActivateRouteGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const user = this.auth.getUserByToken();
 
-    return user ? true : false;
+    if (user) {
+      return true;
+    }
+    
+    this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
+    return false;
   }
 }

@@ -14,7 +14,6 @@ export class AppComponent {
   user: any = null;
 
   constructor(private auth: AuthService) {
-
   }
 
   ngAfterViewInit(): void {

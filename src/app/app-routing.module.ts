@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { EncuentrameComponent } from './screens/encuentrame/encuentrame.component';
 import { HomeComponent } from './screens/home/home.component';
 import { ProfileComponent } from './screens/profile/profile.component';
 import { LoginComponent } from './screens/login/login.component';
@@ -14,14 +15,19 @@ const app_routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [CanActivateRouteGuard]
+  },
+  {
+    path: 'encuentrame',
+    component: EncuentrameComponent,
+    canActivate: [CanActivateRouteGuard]
   },
   {
     path: 'login',
     component: LoginComponent
   },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' },
-  { path: '', pathMatch: 'full', redirectTo: 'home' }
+  { path: '**', redirectTo: '/login' }
 ];
 
 export const app_routing = RouterModule.forRoot(app_routes);

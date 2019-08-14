@@ -2,37 +2,50 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-    user: any = {
+    userModel: any = {
+        username: 'pabcubus',
+        email: 'pabcubus@gmail.com',
         name: 'Pablo Bassil',
         age: '34',
         token: '1234'
-    };
+    }
+
+    user: any;
 
     constructor() {}
 
-    public getUser(user: string, password: string) : Object {
+    public login(user: string, password: string) : Object {
         if (user === 'pabcubus' && password === '123') {
-            localStorage.setItem('token', this.user.token);
+            localStorage.setItem('user', JSON.stringify({
+                name: 'Pablo Bassil',
+                age: '34',
+                token: '1234'
+            }));
+            this.user = this.userModel;
             return this.user;
         } else {
-            localStorage.removeItem('token');
+            localStorage.removeItem('user');
             return null;
         }
     }
 
+    public getUser() : Object {
+        return this.user;
+    }
+
     public getUserByToken() : Object {
-        const user = localStorage.getItem('token');
+        const user = localStorage.getItem('user');
         if (user) {
-            localStorage.setItem('token', this.user.token);
+            this.user = JSON.parse(user);
             return this.user;
         } else {
-            localStorage.removeItem('token');
+            localStorage.removeItem('user');
             return null;
         }
     }
 
     public logout() : Object {
-        localStorage.removeItem('token');
+        localStorage.removeItem('user');
         return null;
     }
 }

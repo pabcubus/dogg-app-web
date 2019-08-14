@@ -1,0 +1,19 @@
+.encuentrame {
+  .card {
+    padding-bottom: 5px;
+
+    &-controls {
+      a {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.modal-map {
+  &-content {
+    img {
+      width: 100%;
+    }
+  }
+}

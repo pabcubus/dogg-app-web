@@ -6,7 +6,8 @@ import {
     MzInputModule,
     MzCardModule,
     MzSidenavModule,
-    MzNavbarModule
+    MzNavbarModule,
+    MzModalModule
   } from 'ngx-materialize';
 
 const materializeModules = [
@@ -14,7 +15,8 @@ const materializeModules = [
     MzInputModule,
     MzCardModule,
     MzSidenavModule,
-    MzNavbarModule
+    MzNavbarModule,
+    MzModalModule
 ];
 
 @NgModule({

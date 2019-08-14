@@ -6,6 +6,32 @@
 
     &-wrapper {
         padding-top: 30%;
-        height: 100px;
+
+        &-image {
+            text-align: center;
+
+            img {
+                width: 40%;
+            }
+        }
+
+        &-inputs {
+            padding: 0 10px;
+
+            .input-field {
+                input, label {
+                    color: white;
+                }
+                
+                input {
+                    border-color: white;
+                }
+            }
+
+            .log-in-btn {
+                color: $mainColor;
+                width: 100%;
+            }
+        }
     }
 }

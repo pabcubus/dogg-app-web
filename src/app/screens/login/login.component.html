@@ -1,5 +1,21 @@
 <div class="login">
     <div class="login-wrapper">
-        <img src="assets/images/icon.png">
+        <div class="login-wrapper-image">
+            <img src="assets/images/icon.png">
+        </div>
+        <div class="login-wrapper-inputs">
+            <form [formGroup]="loginForm">
+                <div class="input-field col s12">
+                    <input id="username" type="text" class="validate" formControlName="username">
+                    <label for="username">First Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate" formControlName="password">
+                    <label for="password">Last Name</label>
+                </div>
+
+                <button class="waves-effect waves-light btn white log-in-btn" (click)="login()">LOG IN</button>
+            </form>
+        </div>
     </div>
 </div>
